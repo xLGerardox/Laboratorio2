@@ -14,3 +14,13 @@ public class Habitacion
         Disponible = true;
         ClienteAsignado = string.Empty;
     }
+
+    public virtual void MostrarInformacion()
+    {
+        Console.WriteLine($"Número: {Numero}, Precio por noche: {PrecioPorNoche}, Disponible: {Disponible}, Cliente: {ClienteAsignado}");
+    }
+
+    public void CambiarDisponibilidad(bool disponible)
+    {
+        Disponible = disponible;
+    }
