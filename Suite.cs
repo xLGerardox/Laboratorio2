@@ -9,3 +9,10 @@
         NumeroDeHabitaciones = numeroDeHabitaciones;
         TieneJacuzzi = tieneJacuzzi;
     }
+
+    public override void MostrarInformacion()
+    {
+        base.MostrarInformacion();
+        Console.WriteLine($"Tipo: Suite, Número de habitaciones: {NumeroDeHabitaciones}, Tiene jacuzzi: {TieneJacuzzi}");
+    }
+}
