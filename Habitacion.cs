@@ -24,3 +24,16 @@ public class Habitacion
     {
         Disponible = disponible;
     }
+
+    public void AsignarCliente(string nombreCliente)
+    {
+        ClienteAsignado = nombreCliente;
+        CambiarDisponibilidad(false);
+    }
+
+    public void LiberarHabitacion()
+    {
+        ClienteAsignado = string.Empty;
+        CambiarDisponibilidad(true);
+    }
+}

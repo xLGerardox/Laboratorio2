@@ -7,3 +7,10 @@
     {
         NumeroDeCamas = numeroDeCamas;
     }
+
+    public override void MostrarInformacion()
+    {
+        base.MostrarInformacion();
+        Console.WriteLine($"Tipo: Habitación Simple, Número de camas: {NumeroDeCamas}");
+    }
+}

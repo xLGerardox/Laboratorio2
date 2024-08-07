@@ -40,7 +40,7 @@ public class Program
                     salir = true;
                     break;
                 default:
-                    Console.WriteLine("Opción no válida.");
+                    Console.WriteLine("la opción ingresada no existe.");
                     break;
             }
         }
@@ -48,7 +48,7 @@ public class Program
 
     static void AgregarHabitacion(SistemaReservas sistemaReservas)
     {
-        Console.WriteLine("Seleccione el tipo de habitación:");
+        Console.WriteLine("Seleccione su tipo de habitación:");
         Console.WriteLine("1. Habitación Simple");
         Console.WriteLine("2. Habitación Doble");
         Console.WriteLine("3. Suite");
@@ -85,7 +85,7 @@ public class Program
                 sistemaReservas.AgregarHabitacion(new HabitacionDeluxe(numero, precio, serviciosExtras));
                 break;
             default:
-                Console.WriteLine("Tipo de habitación no válido.");
+                Console.WriteLine("Tipo de habitación no valida.");
                 break;
         }
     }

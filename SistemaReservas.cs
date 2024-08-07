@@ -13,5 +13,5 @@ public class SistemaReservas
     public void AgregarHabitacion(Habitacion habitacion)
     {
         habitaciones.Add(habitacion);
-        Console.WriteLine("Habitación agregada exitosamente.");
+        Console.WriteLine("Se agrego la habitación.");
     }
