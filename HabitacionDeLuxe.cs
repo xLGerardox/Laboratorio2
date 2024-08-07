@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Laboratorio_2
+﻿public class HabitacionDeluxe : Habitacion
 {
-    internal class HabitacionDeLuxe
+    public string ServiciosExtras { get; set; }
+
+    public HabitacionDeluxe(int numero, double precioPorNoche, string serviciosExtras)
+        : base(numero, precioPorNoche)
     {
+        ServiciosExtras = serviciosExtras;
     }
-}
