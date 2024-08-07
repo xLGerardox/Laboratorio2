@@ -7,3 +7,10 @@
     {
         VistaAlMar = vistaAlMar;
     }
+
+    public override void MostrarInformacion()
+    {
+        base.MostrarInformacion();
+        Console.WriteLine($"Tipo: Habitación Doble, Vista al mar: {VistaAlMar}");
+    }
+}
