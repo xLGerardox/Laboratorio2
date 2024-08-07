@@ -29,3 +29,11 @@ public class SistemaReservas
             Console.WriteLine("No se encontro la Habitacióm.");
         }
     }
+
+    public void MostrarHabitaciones()
+    {
+        foreach (var habitacion in habitaciones)
+        {
+            habitacion.MostrarInformacion();
+        }
+    }
