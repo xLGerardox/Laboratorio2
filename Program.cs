@@ -1,5 +1,4 @@
-﻿using Laboratorio_2;
-using System;
+﻿using System;
 
 public class Program
 {
@@ -60,3 +59,33 @@ public class Program
         int numero = int.Parse(Console.ReadLine());
         Console.Write("Precio por noche: ");
         double precio = double.Parse(Console.ReadLine());
+
+        switch (tipo)
+        {
+            case 1:
+                Console.Write("Número de camas: ");
+                int numeroDeCamas = int.Parse(Console.ReadLine());
+                sistemaReservas.AgregarHabitacion(new HabitacionSimple(numero, precio, numeroDeCamas));
+                break;
+            case 2:
+                Console.Write("¿Tiene vista al mar? (true/false): ");
+                bool vistaAlMar = bool.Parse(Console.ReadLine());
+                sistemaReservas.AgregarHabitacion(new HabitacionDoble(numero, precio, vistaAlMar));
+                break;
+            case 3:
+                Console.Write("Número de habitaciones: ");
+                int numeroDeHabitaciones = int.Parse(Console.ReadLine());
+                Console.Write("¿Tiene jacuzzi? (true/false): ");
+                bool tieneJacuzzi = bool.Parse(Console.ReadLine());
+                sistemaReservas.AgregarHabitacion(new Suite(numero, precio, numeroDeHabitaciones, tieneJacuzzi));
+                break;
+            case 4:
+                Console.Write("Servicios extras: ");
+                string serviciosExtras = Console.ReadLine();
+                sistemaReservas.AgregarHabitacion(new HabitacionDeluxe(numero, precio, serviciosExtras));
+                break;
+            default:
+                Console.WriteLine("Tipo de habitación no válido.");
+                break;
+        }
+    }
