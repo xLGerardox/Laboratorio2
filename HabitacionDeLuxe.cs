@@ -7,3 +7,10 @@
     {
         ServiciosExtras = serviciosExtras;
     }
+
+    public override void MostrarInformacion()
+    {
+        base.MostrarInformacion();
+        Console.WriteLine($"Tipo: Habitación Deluxe, Servicios extras: {ServiciosExtras}");
+    }
+}
