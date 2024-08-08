@@ -25,16 +25,16 @@ public class Program
                     AgregarHabitacion(sistemaReservas);
                     break;
                 case 2:
-                    
+                    EliminarHabitacion(sistemaReservas);
                     break;
                 case 3:
-                   
+                    sistemaReservas.MostrarHabitaciones();
                     break;
                 case 4:
-                  
+                    AsignarHabitacion(sistemaReservas);
                     break;
                 case 5:
-                    
+                    LiberarHabitacion(sistemaReservas);
                     break;
                 case 6:
                     salir = true;
@@ -89,3 +89,27 @@ public class Program
                 break;
         }
     }
+
+    static void EliminarHabitacion(SistemaReservas sistemaReservas)
+    {
+        Console.Write("Número de la habitación a eliminar: ");
+        int numero = int.Parse(Console.ReadLine());
+        sistemaReservas.EliminarHabitacion(numero);
+    }
+
+    static void AsignarHabitacion(SistemaReservas sistemaReservas)
+    {
+        Console.Write("Número de la habitación: ");
+        int numero = int.Parse(Console.ReadLine());
+        Console.Write("Nombre del cliente: ");
+        string nombreCliente = Console.ReadLine();
+        sistemaReservas.AsignarHabitacion(numero, nombreCliente);
+    }
+
+    static void LiberarHabitacion(SistemaReservas sistemaReservas)
+    {
+        Console.Write("Número de la habitación: ");
+        int numero = int.Parse(Console.ReadLine());
+        sistemaReservas.LiberarHabitacion(numero);
+    }
+}

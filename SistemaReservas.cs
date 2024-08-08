@@ -37,3 +37,32 @@ public class SistemaReservas
             habitacion.MostrarInformacion();
         }
     }
+
+    public void AsignarHabitacion(int numero, string nombreCliente)
+    {
+        var habitacion = habitaciones.Find(h => h.Numero == numero);
+        if (habitacion != null && habitacion.Disponible)
+        {
+            habitacion.AsignarCliente(nombreCliente);
+            Console.WriteLine("Habitación asignada.");
+        }
+        else
+        {
+            Console.WriteLine("Habitación no disponible.");
+        }
+    }
+
+    public void LiberarHabitacion(int numero)
+    {
+        var habitacion = habitaciones.Find(h => h.Numero == numero);
+        if (habitacion != null && !habitacion.Disponible)
+        {
+            habitacion.LiberarHabitacion();
+            Console.WriteLine("Habitación liberada.");
+        }
+        else
+        {
+            Console.WriteLine("Habitación no encontrada.");
+        }
+    }
+}
